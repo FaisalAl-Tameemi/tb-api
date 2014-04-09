@@ -1,4 +1,4 @@
-var tbApi = function (server, db) {
+var tbApi = function (server, db, mongojs) {
     // define an access variable for each collection
     var students = db.collection("students"),
         tutors = db.collection("tutors"),
