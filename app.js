@@ -33,7 +33,7 @@ server.use(passport.session());
 // server.use(server.router);
 
 // connect to mongoDB
-var connection_string = '127.0.0.1:27017/tutorbright';
+var connection_string = 'mongodb://heroku_app23945910:21kcbqsnvgro5p3ue3k66opajo@ds037987.mongolab.com:37987/heroku_app23945910';
 var db = mongojs(connection_string, ['tb-api']);
 require("./routes/tb-api")(server, db, mongojs);
 require("./auth/authentication")(server, db, passport, jwt);
