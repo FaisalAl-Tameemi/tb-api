@@ -39,6 +39,6 @@ require("./routes/tb-api")(server, db, mongojs);
 require("./auth/authentication")(server, db, passport, jwt);
 
 // listen to requests for the declared IP above 
-server.listen(port ,ip_addr, function(){
+server.listen(port, function(){
     console.log('%s listening at %s ', server.name , server.url);
 });
