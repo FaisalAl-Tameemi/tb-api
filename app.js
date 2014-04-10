@@ -33,10 +33,10 @@ server.use(passport.session());
 // server.use(server.router);
 
 // connect to mongoDB
-// var connection_string = 'mongodb://tbuser:tbuser@novus.modulusmongo.net:27017/buVeri2q';
-// var db = mongojs(connection_string, ['tb-api']);
-// require("./routes/tb-api")(server, db, mongojs);
-// require("./auth/authentication")(server, db, passport, jwt);
+var connection_string = 'mongodb://tbuser:tbuser@novus.modulusmongo.net:27017/buVeri2q';
+var db = mongojs(connection_string, ['tb-api']);
+require("./routes/tb-api")(server, db, mongojs);
+require("./auth/authentication")(server, db, passport, jwt);
 
 // listen to requests for the declared IP above 
 server.listen(port, function(){
