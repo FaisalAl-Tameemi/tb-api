@@ -33,7 +33,7 @@ server.use(passport.session());
 // server.use(server.router);
 
 // connect to mongoDB
-var connection_string = 'mongodb://tbuser:tbuser@novus.modulusmongo.net:27017/buVeri2q';
+var connection_string = 'mongodb://faisal:fufu@ds037987.mongolab.com:37987/heroku_app23945910';
 var db = mongojs(connection_string, ['tb-api']);
 require("./routes/tb-api")(server, db, mongojs);
 require("./auth/authentication")(server, db, passport, jwt);
