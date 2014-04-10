@@ -14,7 +14,7 @@ var https_options = {
 };
  
 var ip_addr = '127.0.0.1';
-var port    =  '8080';
+var port    =  process.env.PORT || 3000;
 
 var server = restify.createServer(https_options);
 
